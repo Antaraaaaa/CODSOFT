@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+
+  char o;
+  float n1, n2;
+
+  cout << "Enter operator: +, -, *, /: "<<endl;
+  cin >> o;
+  if (o != '+' && o != '-' && o != '*' && o != '/')
+  {
+    cout << "Invalid operator" << endl;
+  }
+  else
+  {
+    cout << "Enter two operands: ";
+    cin >> n1 >> n2;
+    switch (o)
+    {
+
+    case '+':
+      cout << n1 << " + " << n2 << " = " << n1 + n2;
+      break;
+
+    case '-':
+      cout << n1 << " - " << n2 << " = " << n1 - n2;
+      break;
+
+    case '*':
+      cout << n1 << " * " << n2 << " = " << n1 * n2;
+      break;
+
+    case '/':
+      cout << n1 << " / " << n2 << " = " << n1 / n2;
+      break;
+
+    default:
+      cout << "Invalid operator";
+      break;
+    }
+  }
+  return 0;
+}
